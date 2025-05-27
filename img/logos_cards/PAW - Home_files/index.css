@@ -1,0 +1,323 @@
+:root{   
+    --primary-color: #1e90ff;
+    --primary-color-2: #011f67;
+    --secondary-color: #fffdfd;
+    --hover-primary-color: #011f67;
+    --hover-secondary-color: #1e90ff;
+    --nav-background: rgba(0,0,0 , 0.5);
+    --background-aside: rgba(146, 138, 138, 0.086);
+    --border-color: rgb(171, 164, 164);
+    --border-secondary-color: #012067a0;
+
+    --titulo-principal-font: 'Tinos', serif;
+    --titulos-font: 'Mea Culpa', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+   color: var(--primary-color);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    display: grid;
+    grid-template-areas: 
+    "header "
+    "main"
+    "footer";
+}
+
+header{
+    grid-area: header;
+    background-image: url(../img/taller.jpg);
+    background-attachment: fixed;
+    min-height: 700px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--nav-background);
+}
+
+header nav img {
+    border-radius: 50px;
+    margin: 12px;
+}
+
+header nav .links-navegacion {
+    margin: 20px;
+}
+
+header nav .links-navegacion .nav-item{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: transform 0.5s ease;
+}
+
+header nav .links-navegacion .nav-item:hover{
+    color: var(--hover-secondary-color);
+    transform: scale(1.05);
+}
+
+header h1 {
+    font-size: 20rem;
+    font-family: var(--titulo-principal-font);
+    color: var(--primary-color-2);
+    opacity: 90%;
+}
+
+header .cabecera {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "main-cabecera main-cabecera main-cabecera"
+    "main-cards main-cards aside"
+    "main-horarios main-horarios aside";
+}
+
+main .contenedor-info {
+    grid-area: main-cabecera;
+    font-family: var(--titulos-font);
+    text-align: center;
+    margin: 150px 50px 50px 50px;
+    min-height: 450px;
+}
+
+main .contenedor-info h2 {
+    color: var(--primary-color-2);
+    font-size: 3rem;
+    margin: 40px 0;
+}
+
+main .contenedor-info .texto-info {
+    margin: 40px 40px;
+    padding: 20px 20px;
+    font-size: 1.2rem;
+}
+
+main .contenedor-info .boton-info{
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: var(--primary-color-2);
+    transition: transform 0.2s ease;
+}
+
+main .contenedor-info .boton-info:hover{
+    transform: scale(1.1);
+}
+
+main img {
+    width: 180px;
+    margin: 20px;
+    
+}
+
+main .contenedor-cards{
+    grid-area: main-cards;
+    text-align: center;
+    margin: 30px 10px;
+    max-width: 100%;
+}
+
+main .contenedor-cards h2 {
+    width: 100%;
+    margin: 10px 0 60px 0;
+    font-size: 2rem;
+    color: var(--primary-color-2);
+    font-family: 'Mea Culpa' , cursive;
+}
+
+main .contenedor-cards .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main .contenedor-cards .cards .card {
+    margin:20px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    max-width: 50%;
+    transition: transform 0.7s ease, box-shadow 0.2s ease;
+}
+
+main .contenedor-cards .cards .card:hover {
+    transform: scale(1.05);
+    transform: translateY(-10%);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .contenedor-cards .cards .card h3 {
+    margin: 10px;
+    color: var(--primary-color-2);
+    font-size: 1.5rem;
+    font-family: var(--titulos-font);
+
+}
+
+main .contenedor-cards .cards .card p{
+    margin: 10px;
+}
+
+main .contenedor-cards .cards .card a{
+    color: var(--primary-color-2);
+    text-decoration: none;
+}
+
+main .contenedor-cards .cards .card a:hover{
+    color:var(--hover-secondary-color)
+}
+
+main .contenedor-horarios {
+    grid-area: main-horarios;
+    text-align: center;
+    margin: 50px 0;
+}
+
+main .contenedor-horarios h2 {
+    color: var(--primary-color-2);
+    font-family: var(--titulos-font);
+    margin: 10px;
+}
+
+main .contenedor-horarios table, th, td{
+    border: 2px solid var(--border-secondary-color);
+    border-collapse: collapse;
+    margin: 0 50px;
+} 
+
+main aside {
+    grid-area: aside;
+    width: 90%;
+    height: 100%;
+    float: right;
+    background-color: var(--background-aside);
+    border-radius: 20px;
+    text-align: center;
+    
+}
+
+main aside ul{
+    list-style: none;
+    text-align: left;
+    padding: 10px;
+}
+
+main aside h4 {
+    color: var(--primary-color-2);
+    font-family: var(--titulos-font);
+    margin: 20px 10px;
+}
+
+main aside ul h5 {
+    color: var(--primary-color-2);
+    font-size: 0.9rem;
+}
+
+main aside ul li a {
+    display: block;
+    color: var(--primary-color-2);
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 2px;
+    transition: transform 0.1s ease;
+}
+
+main aside ul li a:hover {
+    transform: scale(1.02);
+}
+
+main aside ul li a:hover::before{
+    content: "> ";
+}
+
+footer {
+    grid-area: footer;
+    margin-top: 10px ;
+    background-color: var(--primary-color-2);
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+footer .contenedor-iconos {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+    color: var(--secondary-color);
+}
+
+footer .contenedor-iconos i {
+    margin: 30px 0;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+footer .contenedor-iconos i:hover {
+    transform: scale(1.05);
+    transform: translateY(-10%);
+}
+
+footer .contenedor-copy p {
+    padding: 10px;
+
+}
+
+@media screen and (max-width: 800px) {
+
+    header{
+        max-height: 600px;
+    }
+    
+    header nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    header nav img {
+        width: 100px;
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 12rem;
+    }
+
+    header .cabecera h2 {
+        font-size: 2rem;
+    }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+    header {
+        height: 50px;
+    }
+    
+    header h1 {
+        font-size: 7rem;
+    }
+}

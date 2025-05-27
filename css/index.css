@@ -1,0 +1,249 @@
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "main-cabecera main-cabecera main-cabecera"
+        "main-cards main-cards aside"
+        "main-horarios main-horarios main-horarios";
+    margin: 0 20px;
+}
+
+main .contenedor-info {
+    grid-area: main-cabecera;
+    font-family: var(--titulos-font);
+    text-align: center;
+    margin: 40px auto;
+    padding: 100px;
+    min-height: 450px;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+}
+
+main .contenedor-info h2 {
+    color: var(--primary-color-2);
+    font-size: 3rem;
+    margin: 40px 0;
+}
+
+main .contenedor-info .texto-info {
+    margin: 30px;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+main .contenedor-info .boton-info {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: var(--primary-color-2);
+    transition: transform 0.2s ease;
+}
+
+main .contenedor-info .boton-info:hover {
+    transform: scale(1.1);
+}
+
+main img {
+    width: 180px;
+    margin: 20px;
+
+}
+
+main .contenedor-cards {
+    grid-area: main-cards;
+    text-align: center;
+    max-width: 100%;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+main .contenedor-cards h2 {
+    width: 100%;
+    margin: 10px 0 60px 0;
+    padding-top: 40px;
+    font-size: 2rem;
+    color: var(--primary-color-2);
+}
+
+main .contenedor-cards .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+}
+
+main .contenedor-cards .cards .card {
+    margin: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    max-width: 50%;
+    transition: transform 0.7s ease, box-shadow 0.2s ease;
+}
+
+main .contenedor-cards .cards .card:hover {
+    transform: scale(1.05);
+    transform: translateY(-10%);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .contenedor-cards .cards .card h3 {
+    margin: 10px;
+    color: var(--primary-color-2);
+    font-size: 1.5rem;
+    font-family: var(--titulos-font);
+
+}
+
+main .contenedor-cards .cards .card p {
+    margin: 10px;
+}
+
+main .contenedor-cards .cards .card a {
+    color: var(--primary-color-2);
+    text-decoration: none;
+}
+
+main .contenedor-cards .cards .card a:hover {
+    color: var(--hover-secondary-color)
+}
+
+main .contenedor-horarios {
+    grid-area: main-horarios;
+    text-align: center;
+    margin: 50px auto;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    border-radius: 30px;
+}
+
+main .contenedor-horarios h2 {
+    font-size: 2rem;
+    font-family: var(--titulo-principal-font);
+    color: var(--primary-color-2);
+    font-family: var(--titulos-font);
+    margin: 10px;
+}
+
+main .contenedor-horarios table {
+    margin: 20px 0;
+    width: 100%;
+    height: 150px;
+    border-collapse: collapse;
+    font-size: 1rem;
+    border-radius: 40px;
+}
+
+main .contenedor-horarios table th,
+td {
+    border: 0.5px solid var(--border-secondary-color);
+    padding: 12px 15px;
+}
+
+main .contenedor-horarios table th {
+    font-weight: 600;
+}
+
+main .contenedor-horarios table td:hover {
+    background-color: var(--hover-table-color);
+}
+
+main .contenedor-horarios table#vertical {
+    display: none;
+}
+
+main aside {
+    grid-area: aside;
+    width:100%;
+    height: 100%;
+    background-color: var(--background-aside);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    text-align: center;
+}
+
+main aside ul {
+    list-style: none;
+    text-align: left;
+    padding: 20px;
+}
+
+main aside h4 {
+    color: var(--primary-color-2);
+    font-family: var(--titulos-font);
+    margin: 20px 10px;
+}
+
+main aside ul h5 {
+    color: var(--primary-color-2);
+    font-size: 0.9rem;
+}
+
+main aside ul li a {
+    display: block;
+    color: var(--primary-color-2);
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 2px;
+    transition: transform 0.1s ease;
+}
+
+main aside ul li a:hover {
+    transform: scale(1.02);
+}
+
+main aside ul li a:hover::before {
+    content: "> ";
+}
+
+@media (max-width: 450px) {
+    main {
+        margin: 0 5px;
+        grid-template-areas:
+            "main-cabecera"
+            "main-cards"
+            "main-horarios";
+    }
+
+    main .contenedor-info {
+        margin: 10px 0 25px 0;
+        padding: 0;
+    }
+
+    main .contenedor-info h2 {
+        font-size: 1.5rem;
+    }
+
+    main .cointenedor-info p {
+        margin: 0 auto;
+        padding: 0 auto;
+        text-align: center;
+        font-size: 0.5rem;
+    }
+
+    main .contenedor-info .boton-info {
+        font-size: 1rem;
+    }
+
+    main .contenedor-cards .cards .card img{
+        width: 60%;
+    }
+
+    main section {
+        width: 100%;
+    }
+
+    main aside {
+        display: none;
+    }
+
+    main .contenedor-horarios table#horizontal {
+        display: none;
+    }
+
+    main .contenedor-horarios table#vertical {
+        display: inline;
+    }
+}

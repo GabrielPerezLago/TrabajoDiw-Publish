@@ -1,0 +1,170 @@
+:root {
+    --primary-color: #1e90ff;
+    --primary-color-2: #011f67;
+    --secondary-color: #fffdfd;
+    --contrast-color: black;
+    --contrast-secondary-color: rgba(128, 128, 128, 0.566);
+    --hover-primary-color: #011f67;
+    --hover-secondary-color: #1e90ff;
+    --nav-background: rgba(0, 0, 0, 0.5);
+    --nav--secondary--background: rgb(0, 0, 0);
+    --background-aside: rgba(146, 138, 138, 0.086);
+    --border-color: rgb(171, 164, 164);
+    --border-secondary-color: #012067a0;
+    --shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    --titulo-principal-font: 'Playfair Displa', serif;
+    --text-font: 'Roboto', sans-serif;
+}
+
+
+main {
+    margin: 10px;
+}
+
+main section {
+    padding: 50px;
+}
+
+main section article {
+    margin: 30px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+}
+
+main section article h2 {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    color: var(--primary-color-2);
+    font-size: 2rem;
+    font-family: var(--titulo-principal-font);
+}
+
+main section article {
+    p {
+        width: 50%;
+        line-height: 200%;
+        margin: 10px;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    p#historia {
+        float: left;
+
+    }
+
+    p#mision {
+        float: right;
+    }
+
+    p#vision {
+        float: left;
+    }
+}
+
+main section article p::first-letter {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+main section article img {
+    margin-left: 50px;
+    width: 40%;
+    border-radius: 20px;
+}
+
+
+main section .valores ul {
+    margin: 10px;
+    text-align: justify;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+}
+
+main section .valores ul:nth-child(odd) {
+    float: left;
+}
+
+main section .valores ul li {
+    margin: 10px 15px 10px 0;
+}
+
+main section .valores ul li strong {
+    color: var(--primary-color-2);
+}
+
+@media screen and (max-width: 800px) {
+
+   
+
+    main section article {
+        padding: 0 auto;
+
+        p {
+            all: unset;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0 0;
+            font-size: 1.2rem;
+            line-height: 130%;
+        }
+
+        p#historia {
+            float: none;
+
+        }
+
+        p#mision {
+            float: none;
+        }
+
+        p#vision {
+            float: none;
+        }
+    }
+
+    main section article p::first-letter {
+        text-transform: capitalize;
+        font-size: 1.8rem;
+    }
+
+    main section article img {
+        margin: 50px 5px 20px 5px;
+        width: 100%;
+    }
+
+    main section article ul li{
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 450px) {
+
+    main section article {
+        margin: 40px 5px;
+        padding: 25px 20px;
+    }
+
+    main section article h2 {
+        font-size: 1.3rem;
+        margin: 5px 20px;
+    }
+
+    main section article{
+        p {
+           all: unset;
+           line-height: 115%;
+           font-size: 1.15rem;
+        }
+    }
+
+    main section article img {
+        display: none;
+    }
+
+    
+}

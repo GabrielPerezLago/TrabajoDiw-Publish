@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/registro.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/icons/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Registro</title>
+</head>
+<body>
+    <header id="registro">
+        <nav class="menu-navegacion">
+            <div class="nav-imagen">
+                <img src="./img/logo.jpg" alt="Logo" width="50px" height="50px">
+            </div>
+            <div class="links-navegacion">
+                <a href="./index.html">Inicio</a>
+                <a href="./sobreNosotros.html" class="nav-item">Sobre Nosotros</a>
+                <a href="./contacto.html" class="nav-item">Contactanos</a>
+                <a href="./registro.html" class="nav-item">Resgistrate</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+       <section class="formulario-login">
+            <h2>Registrarse</h2>
+            <form>
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ingrese su nombre de Usuario" class="input-text" required>
+                
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Ingrese su Contraseña" class="input-text" required/>
+                
+                <label for="email">Correo Electronico</label>
+                <input type="email" name="email" id="email" class="input-text" placeholder="Ingresse Correo Electronico">
+
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento" class="input">
+
+                <label for="sexo">Sexo</label>
+                <select name="sexo" id="sexo">
+                    <option value="none"> - </option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="nsnc">Prefiero no decirlo</option>
+                </select>
+                
+                <label for="biografia">Biografia Corta:
+                </label>
+                <textarea name="biografia" id="biografia"></textarea>
+
+                <input type="button" id="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="contenedor-iconos">
+            <a href="http://"><i class="fa-brands fa-facebook"></i></a>
+            <a href="http://"><i class="fa-brands fa-instagram"></i></a>
+            <a href="http://"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="http://"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="http://"><i class="fa-brands fa-facebook-messenger"></i></a>
+        </div>
+        <p>&copy; 2024 PAW. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
